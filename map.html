@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="css/base.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id='map' style='width: 100%; height: 30vh;'></div>
+  <style>
+    #map{
+      position: fixed;
+      bottom: 0;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  </style>
+
+  <script>
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;
+
+          createMap(longitude,latitude)
+          console.log("Latitude: " + latitude);
+          console.log("Longitude: " + longitude);
+        },
+        function (error) {
+          console.log("Error getting location: " + error.message);
+        }
+      );
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+
+  </script>
+
+  <script>
+    const createMap =(lon,lat)=>{
+      mapboxgl.accessToken = 'pk.eyJ1IjoiYWxwaGFkaW5hciIsImEiOiJjbDZteDV5aTIwN24yM2ZvZmw5MDczankxIn0.GcppD4tq-Ojc-5N4jVJ5SQ';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [lon, lat],
+        zoom: 15
+      });
+  
+      map.setStyle('mapbox://styles/mapbox/' + 'outdoors-v12');
+    }
+  </script>
+
+</body>
+
+</html>

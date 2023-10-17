@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/eb75260fb3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+  <link rel="stylesheet" href="css/hotelipad.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <title>Dev&Pixel</title>
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <section class="page">
+    <nav class="head_nav">
+      <p>
+        <a href="partner.html">
+          <i class="material-symbols-outlined">real_estate_agent</i>
+          <small>
+            <strong>List Your Property</strong>
+            <span>Start earning in 30 mins</span>
+          </small>
+        </a>
+        <a href="" >
+          <i class="material-symbols-outlined">smartphone</i>
+          <small>
+            <strong>The software</strong>
+            <span>Efficient and Reliable</span>
+          </small>
+        </a>
+
+      </p>
+      <article>
+        <a href="login.html">Login</a>
+        <hr>
+        <a href="register.html">Register</a>
+        <hr>
+      </article>
+      <button class="material-symbols-outlined" id="head_nav_tag">menu</button>
+    </nav>
+
+    <section class="head_box">
+      <nav class="social_nav">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </nav>
+      <div class="head_box_swiper swiper" style="background-image: url(room3.jpg);">
+        <div class="swiper_cover"></div>
+      </div>
+      <div class="head_box_con">
+        <form action="rooms.html">
+          <button type="button">
+            Near me <i class="material-symbols-outlined">my_location</i>
+          </button>
+          <div class="input_field">
+            <span>City</span>
+            <input type="text" placeholder="City">
+          </div>
+
+          <div class="input_field">
+            <span>Duration</span>
+            <input type="date" placeholder="Duration">
+          </div>
+          <!-- <div>
+            <i class="material-symbols-outlined">timer</i> 
+            1 month, 2 Weeks
+          </div> -->
+
+          <!-- <div class="input_field">
+            <span>Depature Date</span>
+            <input type="date" placeholder="Depature Date">
+          </div> -->
+          <div class="input_field num_box" style="cursor: pointer;">
+            <span>Number Of Guests</span>
+            <strong id="guest_num">
+              <small id="room_counter">1 Room</small>
+              <small id="guest_counter">1 Guest</small>
+            </strong>
+            <!-- <style>
+              #guest_num input[type='number']{
+                border: 1px solid black;
+                /* height: 15px; */
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                text-align: center !important;
+                padding: 0 !important;
+                width: 20px;
+                color: black !important;
+              }
+            </style> -->
+            <div class="room_nav_box">
+              <div>
+                <span>Room</span>
+                <span>Guests</span>
+              </div>
+              <article id="room_items">
+                <div class="room_li">
+                  <span>Room 1</span>
+                  <section>
+                    <small class="add">+</small>
+                    <strong class="room_nav_box_in">1</strong>
+                    <small class="sub">-</small>
+                  </section>
+                </div>
+              </article>
+              <div>
+                <span class="rem_room">Remove</span>
+                <span class="add_room">Add Room</span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="input_field"> -->
+          <button type="submit">
+            <small>Run A Search</small>
+            <i class="material-symbols-outlined">youtube_searched_for</i>
+          </button>
+          <!-- </div> -->
+        </form>
+        <p>
+          <span><span>Rediscover <span id="s1">Serenity;</span> </span></span> <span>perfect budget</span> <span>Hotels
+            and Homes</span> <span id="s1">in Ghana.</span>
+        </p>
+      </div>
+    </section>
+    <section class="mid_box">
+      <section class="mid_box_con">
+
+        <img id="mbci" src="ghana_map.png" alt="">
+
+        <div class="mid_box_city">
+          <div class="mid_box_city_swiper_box">
+            <div class="mid_box_city_con_swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <p class="mid_p" style="background:#6a9de2;color: white;">
+                    Welcome
+                  </p>
+                </div>
+                <div class="swiper-slide" style="background: #fdcf6d; color: white;">
+                  <p class="mid_p">
+                    Serenity
+                  </p>
+                </div>
+                <div class="swiper-slide" style="background: #e3a260; color: white;">
+                  <p class="mid_p">
+                    Ghana's Leading
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mid_box_city_image_swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="images/three-star-hotel-4454016-3692797.webp" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/summer.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="images/hotel-3485078-2914596.webp" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="mid_box_city_text_swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background:#6a9de2;color: white;">
+                  <p>To our luxurious hotels</p>
+                </div>
+                <div class="swiper-slide" style="background: #fdcf6d; color: white;">
+                  <p>Whether you're here for business or pleasure</p>
+                </div>
+                <div class="swiper-slide" style="background: #e3a260; color: white;">
+                  <p>Home and Hostel management platform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="intro_box">
+      <section class="intro_box_left">
+        <div class="intro_box_left_box">
+          <i class="material-symbols-outlined">support_agent</i>
+          <strong>Customer Service</strong>
+          <p class="intro_box_p">We have a customer service team that can assist users with any questions or issues they may have.</p>
+        </div>
+        <div class="intro_box_left_box">
+          <i class="material-symbols-outlined">finance_chip</i>
+          <strong>Competitive Prices</strong>
+          <p class="intro_box_p">We offer competitive prices for hotels, so customers can be sure they're getting a great deal.</p>
+        </div>
+        <div class="intro_box_left_box">
+          <i class="material-symbols-outlined">finance_chip</i>
+          <strong>Loyalty program</strong>
+          <p class="intro_box_p">We reward our loyal customers with exclusive perks, such as free nights and room upgrades.</p>
+        </div>
+      </section>
+      <section class="intro_box_right">
+        <div class="intro_box_right_swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(images/room2.jpg);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(images/room3.jpg);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(images/room1.jpg);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="hostel_swiper_box">
+      <div class="hostel_swiper_con">
+        <div class="info info_swiper swiper" id="con_info">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide info_swiper_slide" data-id="0">
+              <strong>Relax and unwind </strong>
+              <p>in our peaceful oasis</p>
+              <!-- <p>at its finest with our stunning hotel rooms, each designed to provide ultimate comfort and relaxation during your stay. </p> -->
+            </div>
+            <div class="swiper-slide info_swiper_slide" data-id="1">
+              <strong>Escape</strong>
+              <p>to paradise and indulge in luxury at our hotels. </p>
+            </div>
+            <div class="swiper-slide info_swiper_slide" data-id="2">
+              <strong>Discover</strong>
+              <p>unparalleled luxury. </p>
+              <!-- and exceptional service. -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <section class="hostel_swiper_holder">
+        <div class="hostel_swiper hs1 swiper ">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(images/room7.webp);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(images/room8.jpg);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hostel_swiper hs2 swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(images/room9.jpg);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(images/room3.jpg);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hostel_swiper hs3 swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(images/room5.jpg);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(images/room10.avif);">
+              <div class="con">
+                <strong>New Palace</strong>
+                <span>Ahodwo</span>
+                <span>Ghc 45,00 - per night</span>
+                <a href="rooms.html">-></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="footer">
+      <section class="footer_cover">
+        <section class="footer_top">
+          <p>
+            <span id="fp_big">Join our network and grow your business!</span>
+            <a href="partner.html"> <i class="material-symbols-outlined">real_estate_agent</i> List Your Property</a>
+          </p>
+        </section>
+        <hr>
+        <section class="footer_mail">
+          <p id="fp_big">Subscribe for more updates on our programs</p>
+          <div class="input_field">
+            <i class="material-symbols-outlined">mail</i>
+            <input type="text" placeholder="email">
+          </div>
+        </section>
+        <hr>
+        <section class="footer_mid">
+          <section>
+            <div>
+              <a href="about.html">About Us</a>
+              <a href="support.html">Support</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="blog.html">Official Dev&Pixel Blog</a>
+              <a href="terms_and_conditions.html">Terms and conditions</a>
+            </div>
+          </section>
+          <section>
+            <div>
+              <a href="guest_policy.html">Guest Policies</a>
+              <a href="privacy_policy.html">Privacy Policy</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="safety.html">Trust And Safety</a>
+              <a href="disclosure.html">Responsible Disclosure</a>
+            </div>
+          </section>
+        </section>
+        <hr>
+        <section class="footer_mid">
+          <section>
+            <div>
+              <a href="rooms.html">Hotels in Tema</a>
+              <a href="rooms.html">Hotels in Sunyani</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="rooms.html">Hotels in Spintex</a>
+              <a href="rooms.html">Hotels in Achimota</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="rooms.html">Hotels in Takoradi</a>
+              <a href="rooms.html">Hotels in Kwahu</a>
+            </div>
+          </section>
+          <section id="low_span_vanish">
+            <div>
+              <a href="rooms.html">Hotels in Ahodwo</a>
+              <a href="rooms.html">Hotels in Accra</a>
+            </div>
+            <div>
+              <a href="rooms.html">Hotels in East Legon</a>
+              <a href="rooms.html">Hotels in Asokwa</a>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+
+  <style>
+    .intro_box_left p {
+      display: none;
+      padding: 0;
+      gap: 0.2rem;
+      flex-wrap: wrap;
+    }
+
+    .intro_box_left #hide {
+      display: none;
+    }
+
+    .intro_box_left span {
+      display: block;
+    }
+
+    .intro_box_left small {
+      display: inline-block;
+      font-size: 1rem;
+    }
+  </style>
+
+  <script>
+    const hostel_swiper_box = document.querySelector('.hostel_swiper_box')
+    const con_info = document.getElementById('con_info')
+    const head_box_form = document.querySelector('.head_box_con form')
+
+    const hsb_options = {};
+    const hostelSwiperBoxObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          head_box_form.classList.add('change')
+        } else {
+          head_box_form.classList.remove('change')
+        }
+      })
+    }, hsb_options)
+    hostelSwiperBoxObserver.observe(hostel_swiper_box)
+  </script>
+  <script>
+    const intro_box = document.querySelector('.intro_box')
+    const intro_box_p = document.querySelectorAll('.intro_box_p')
+    const intro_box_left_box = document.querySelectorAll('.intro_box_left_box')
+    const mid_box = document.querySelector('.mid_box')
+    const mid_p = document.querySelector('.mid_p')
+
+    sessionStorage.clear()
+
+    const ibo_options = {rootMargin:'-150px'};
+    const introBoxObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          console.log('me')
+          if (!sessionStorage.getItem('animeIntroBoxP')) {
+            animeIntroBoxP()
+            sessionStorage.setItem('animeIntroBoxP', 1)
+          }
+        }
+      })
+    }, ibo_options)
+    introBoxObserver.observe(intro_box)
+
+    const animeIntroBoxP = () => {
+      const do_span =(bi)=>{
+        intro_box_p[bi].style.display = 'flex'
+      }
+      intro_box_left_box.forEach((box, bi) => {
+        anime({
+          targets: box,
+          translateY: [100, 0],
+          opacity: [0, 1],
+          delay: 300 * bi,
+          duration: 400,
+          easing: 'easeInOutQuad',
+          begin: do_span(bi),
+        })
+      })
+      
+
+
+      intro_box_p.forEach(intro_p=>{
+        intro_p.innerHTML =
+          intro_p.innerHTML.split(' ').map(span => {
+            if (span === ' ') {
+              span.remove()
+            }
+            return `<span>${span}</span>`
+          }).join(' ')
+      })
+
+      intro_box_p.forEach(intro_p=>{
+        [...intro_p.children].forEach(span=>{
+          span.innerHTML = 
+            span.innerHTML.split('').map(small=>{
+              return `<small class='intro_box_smalls'>${small}</small>`
+            }).join('')
+        })
+      })
+
+
+      document.querySelectorAll('.intro_box_smalls').forEach((small,si)=>{
+        anime({
+          targets: small,
+          translateX: [30, 0],
+          opacity: [0, 1],
+          delay: eval(si + 1) * 5,
+          // easing: 'easeInOutQuad',
+          duration: 500,
+          easing: 'spring(1, 80, 10, 0)'
+        });
+      })
+    }
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    var mid_box_city_image_swiper = new Swiper(".mid_box_city_image_swiper", {
+      loop: true,
+      speed: 1500,
+      autoplay: {
+        delay: 3000,
+      },
+    });
+    var mid_box_city_con_swiper = new Swiper(".mid_box_city_con_swiper", {
+      direction: 'vertical',
+      loop: true,
+      speed: 1500,
+    });
+    var mid_box_city_text_swiper = new Swiper(".mid_box_city_text_swiper", {
+      direction: 'horizontal',
+      loop: true,
+      speed: 1500,
+      autoplay: {
+        delay: 3000,
+        reverseDirection: true,
+      },
+    });
+    mid_box_city_image_swiper.on('slideChange', () => {
+      mid_box_city_con_swiper.slideNext()
+      mid_box_city_text_swiper.slideNext()
+    })
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="js/index.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/swiper.js"></script>
+  <script>
+    config = {
+      altInput: true,
+      altFormat: "J F, Y",
+      mode: "range",
+      disableMobile: false
+    }
+
+    flatpickr("input[type=date]", config);
+  </script>
+</body>
+
+</html>

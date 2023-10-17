@@ -1,0 +1,231 @@
+.hotel_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10vh;
+}
+.hotel_box .top{
+  display: flex;
+  align-items: center;
+}
+.hotel_box .top .right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 5%;
+  justify-content: center;
+}
+.hotel_box .top .right #p1{
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 2.3rem;
+  display: flex;
+  flex-direction: column;
+}
+.hotel_box .top .right #p1{
+  color: #472b55;
+}
+.hotel_box .top .right #p2{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.hotel_box .top .right #p2{
+  color: #472b55;
+}
+
+.hotel_box .top .right a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  color: white;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+.hotel_box .top .right a{
+  background: #472b55;
+}
+
+
+.hotel_box .top .right a:hover{
+  background: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.hotel_box .top .right a:hover{
+  color: #472b55;
+}
+.hotel_box hr, .book_box hr{
+  width: 50px;
+  height: 2px;
+  background: black;
+}
+.hotel_box .low{
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.hotel_box .low .box{
+  width: 300px;
+  padding: 2%;
+  margin: 10px;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  gap: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.hotel_box .low .box{
+  background: url(images/bv.jpg);
+}
+.hotel_box .low .box:hover{
+  background: rgb(77, 107, 119);
+}
+.hotel_box .low .box #tag{
+  width: 50px;
+  height: 50px;
+  background: rgba(256, 256, 256, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.hotel_box .low .box #tag{
+  color: wheat;
+}
+.hotel_box .low .box #p1{
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+.hotel_box .low .box #p1{
+  color: rgb(249, 235, 209);
+}
+.head_box{
+  min-height: 70vh;
+  width: 80%;
+  padding: 1rem 10%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  background: whitesmoke;
+  justify-content: space-around;
+  align-items: center;
+}
+.head_box .text_box{
+  width: 500px;
+}
+.head_box .text_box span{
+  font-size: 3rem;
+}
+.head_box .image_box{
+  width: 500px;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  --mask: 
+  linear-gradient(#000 0 0) 50%/calc(100% - 9.25px) calc(100% - 9.25px) no-repeat,
+  radial-gradient(farthest-side,#000 98%,#0000) 0 0/10px 10px round;
+  -webkit-mask: var(--mask);
+        mask: var(--mask);
+}
+.team_box{
+  width: 90%;
+  padding: 20px 5%;
+}
+.team_box_swiper{
+  width: 100%;
+}
+.team_box_swiper .swiper-slide{
+  background-position: center;
+  background-size: cover;
+  min-height: 55vh;
+  border-radius: 200px 200px 0 0;
+  overflow: hidden;
+}
+.team_box_swiper .swiper-slide p{
+  background: rgba(0,0,0,0.8);
+  position: absolute;
+  width: 200px;
+  left: -75px;
+  border-radius: 0 0 10px 0;
+  height: 50px;
+  letter-spacing: 1px;
+  bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  rotate: -90deg;
+  color: wheat;
+  transition: 0.5s ease;
+}
+@media all and (max-width:1000px){
+  .head_box{
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .head_box .text_box{
+    text-align: center;
+    width: 100%;
+  }
+}
+@media all and (max-width:800px){
+  .hotel_box{
+    margin: 0;
+  }
+}
+
+@media all and (max-width:550px){
+  .hotel_box .top{
+    flex-direction: column;
+  }
+  .hotel_box .top .right{
+    align-items: center;
+    text-align: center;
+  }
+}
+@media all and (max-width:500px){
+  .head_box .image_box{
+    width: 300px;
+    height: 300px;
+  }
+}
+@media all and (max-width:380px){
+  .head_box .image_box{
+    width: 200px;
+    height: 200px;
+  }
+  .team_box_swiper .swiper-slide{
+    min-height: 30vh;
+  }
+  .team_box_swiper .swiper-slide p{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    rotate: 0deg;
+  }
+}
+
+
+
+
+.intro_box{
+  width: 90%;
+  padding: 20px 5%;
+}
+.intro_box_swiper{
+  width: 100%;
+}
+.intro_box_swiper .swiper-slide{
+  background-position: center;
+  background-size: cover;
+  min-height: 25vh;
+  border-radius: 10px;
+}

@@ -1,0 +1,76 @@
+.support_box_holder{
+  margin-top: 10vh;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.support_box{
+  width: 785px;
+  padding: 15px;
+  height: 65vh;
+  background: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.support_box_header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.support_box_header strong{
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.support_box_header img{
+  height: 130px;
+  width: 130px;
+}
+.support_box form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 90%;
+  padding: 0 5%;
+  gap: 1rem;
+}
+.support_box form .input_field{
+  width: 100%;
+  display: flex;
+  gap: 0.3rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.support_box form .input_field input{
+  height: 30px;
+  width: 95%;
+  padding: 10px 2.5%;
+  border-radius: 3px;
+  border: 1px solid orange;
+}
+.support_box form button{
+  padding: 10px;
+  background: rgb(32, 20, 20);
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media all and (max-width:1300px){
+  .support_box_holder{
+    margin: 0;
+    height: 86vh;
+  }
+}
+@media all and (max-width:900px){
+  .support_box{
+    width: 80%;
+  }
+  .support_box p{
+    text-align: center;
+  }
+}

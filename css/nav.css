@@ -1,0 +1,54 @@
+.main_nav{
+  position: absolute;
+  min-height: 10vh;
+  top: 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: rgba(255, 255, 255, 1);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  transition: 0.5s ease;
+}
+.main_nav.change{
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  animation: rollDown 0.3s ease;
+}
+@keyframes rollDown{
+  0%{top: -100px; opacity: 0;}
+  100%{top: 0; opacity: 1;}
+}
+
+.main_nav div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.main_nav div a{
+  padding: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: rgb(61, 61, 61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (max-width:800px){
+  .main_nav{
+    position: revert;
+    flex-direction: column;
+    margin-bottom: 0.3vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .main_nav div{
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .main_nav div a{
+    box-shadow: none;
+  }
+}

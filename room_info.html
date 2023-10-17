@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/searchBar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/room_info.css">
+  <title>Dev&Pixel - Room Details</title>
+</head>
+
+<body>
+
+  <section class="page">
+    <form class="search_bar">
+      <button type="button">
+        Near me <i class="material-symbols-outlined">my_location</i>
+      </button>
+      <div class="input_field">
+        <input type="text" placeholder="City">
+      </div>
+
+      <div class="input_field">
+        <input type="date" placeholder="Duration">
+      </div>
+      <!-- <div>
+        <i class="material-symbols-outlined">timer</i> 
+        1 month, 2 Weeks
+      </div> -->
+
+      <!-- <div class="input_field">
+        <span>Depature Date</span>
+        <input type="date" placeholder="Depature Date">
+      </div> -->
+      <div class="input_field num_box">
+        <!-- <span>Number Of Guests</span> -->
+        <strong id="guest_num">
+          <small id="room_counter">1 Room</small> ,
+          <small id="guest_counter">1 Guest</small>
+        </strong>
+        <div class="room_nav_box">
+          <div>
+            <span>Room</span>
+            <span>Guests</span>
+          </div>
+          <article id="room_items">
+            <div class="room_li">
+              <span>Room 1</span>
+              <section>
+                <small class="add">+</small>
+                <strong class="room_nav_box_in">1</strong>
+                <small class="sub">-</small>
+              </section>
+            </div>
+          </article>
+          <div>
+            <span class="rem_room">Remove</span>
+            <span class="add_room">Add Room</span>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="input_field"> -->
+      <button type="submit">
+        <small>Run A Search</small>
+        <i class="material-symbols-outlined">youtube_searched_for</i>
+      </button>
+      <!-- </div> -->
+    </form>
+    <section class="head_box">
+      <div class="head_box_swiper swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url(images/room2.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(images/room3.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(images/room6.jpg);"></div>
+          <div class="swiper-slide" style="background-image: url(images/room3.jpg);"></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="head_box_swiper_prev material-symbols-outlined">arrow_back_ios</div>
+        <div class="head_box_swiper_next material-symbols-outlined">arrow_forward_ios</div>
+      </div>
+    </section>
+
+    <section class="room_box">
+      <div class="room_box_left">
+        <div class="room_box_header">
+          <strong>Ridge Condos</strong>
+          <small>Ahodwo Rd 123, str</small>
+        </div>
+        <div class="room_box_ratings">
+          <span style="background: #1ab64f; color: white;">4.5 <i class="material-symbols-outlined">star</i> Excellent</span>
+          <span style="background: #fdcf6d; color: white;">Guest Age should be 21 +</span>
+        </div>
+        <div class="room_box_description">
+          <strong>Description</strong>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident nostrum quaerat sit. Nostrum nihil quae dicta similique debitis placeat nobis quo sed qui atque, quod corrupti labore illum eaque maxime.
+          </p>
+          <button>Read More...</button>
+        </div>
+        <div class="room_box_amenities">
+          <strong>Amenities</strong>
+          <div class="amenities">
+            <span><i class="material-symbols-outlined">ac_unit</i>AC</span>
+            <span><i class="material-symbols-outlined">wifi</i>Free Wifi</span>
+            <span><i class="material-symbols-outlined">bed</i>Queen Sized Bed</span>
+            <span><i class="material-symbols-outlined">shower</i>Attached Washroom </span>
+            <span><i class="material-symbols-outlined">tv</i>TV </span>
+            <span><i class="material-symbols-outlined">nest_cam_iq_outdoor</i>CCTV Cameras</span>
+            <button>Read More...</button>
+          </div>
+        </div>
+        <div class="room_box_policy">
+          <strong>Hotel Policies</strong>
+          <div>
+            <small><span>check-in</span> <span style="font-size: 0.9rem; color: rgb(114, 114, 114);">12:00 PM</span> </small> 
+            <small><span>check-out</span> <span style="font-size: 0.9rem; color: rgb(112, 112, 112);">10:00 AM</span> </small> 
+          </div>
+          <nav class="room_box_policy_nav">
+            <a href="">View Guest Policy</a>
+            <a href=""><i class="material-symbols-outlined">search</i> Find Hotels without these rules</a>
+          </nav>
+          <div class="room_box_nearby">
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="room_box_right">
+        <div class="room_box_pricing">
+          <div>
+            <strong style="color: #1ab64f;">Ghc 7,500</strong> 
+            <small style="text-decoration: line-through;">Ghc 10,000</small> 
+            <span style="color: #fdcf6d;">25% off</span>
+          </div>
+          <small style="color: darkgray;">Inclusive of all Taxes</small>
+        </div>
+        <div class="room_box_guest">
+          <span>23rd March,2021 to 28th March,2023</span>
+          <span>3 Guests, 2 Rooms</span>
+        </div>
+        <hr>
+        <div class="room_box_invoice">
+          <p>
+            <span>Your savings</span> <span>Ghc 2,300</span>
+          </p>
+          <p>
+            <span style="display: flex; flex-direction: column;">Your Price <i style="font-style: normal; font-size: 0.8rem; color: darkgray;">(inc. all taxes)</i> </span> <span>Ghc 7,500</span>
+          </p>
+        </div>
+        <a href="room_book.html">
+          Continue to Book
+        </a>
+      </div>
+    </section>
+    <section class="footer">
+      <section class="footer_cover">
+        <section class="footer_top">
+          <p>
+            <span id="fp_big">Join our network and grow your business!</span> 
+            <a href="partner.html"> <i class="material-symbols-outlined">real_estate_agent</i>  List Your Property</a>
+          </p>
+        </section>
+        <hr>
+        <section class="footer_mail">
+          <p id="fp_big">Subscribe for more updates on our programs</p>
+          <div class="input_field">
+            <i class="material-symbols-outlined">mail</i>
+            <input type="text" placeholder="email">
+          </div>
+        </section>
+        <hr>
+        <section class="footer_mid">
+          <section>
+            <div>
+              <a href="about.html">About Us</a>
+              <a href="support.html">Support</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="blog.html">Official Dev&Pixel Blog</a>
+              <a href="terms_and_conditions.html">Terms and conditions</a>
+            </div>
+          </section>
+          <section>
+            <div>
+              <a href="guest_policy.html">Guest Policies</a>
+              <a href="privacy_policy.html">Privacy Policy</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="safety.html">Trust And Safety</a>
+              <a href="disclosure.html">Responsible Disclosure</a>
+            </div>
+          </section>
+        </section>
+        <hr>
+        <section class="footer_mid">
+          <section>
+            <div>
+              <a href="rooms.html">Hotels in Tema</a>
+              <a href="rooms.html">Hotels in Sunyani</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="rooms.html">Hotels in Spintex</a>
+              <a href="rooms.html">Hotels in Achimota</a>
+            </div>
+            <div id="low_span_vanish">
+              <a href="rooms.html">Hotels in Takoradi</a>
+              <a href="rooms.html">Hotels in Kwahu</a>
+            </div>
+          </section>
+          <section id="low_span_vanish">
+            <div>
+              <a href="rooms.html">Hotels in Ahodwo</a>
+              <a href="rooms.html">Hotels in Accra</a>
+            </div>
+            <div>
+              <a href="rooms.html">Hotels in East Legon</a>
+              <a href="rooms.html">Hotels in Asokwa</a>
+            </div>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    window.onload =()=>{
+      var wide = window.innerWidth
+      makeHeadBoxSwiper(wide)
+    }
+    window.onresize =()=>{
+      var wide = window.innerWidth
+      makeHeadBoxSwiper(wide)
+    }
+
+    const makeHeadBoxSwiper =(wide)=>{
+      if(wide > 700){var slideNum = 2}else{var slideNum = 1}
+      var head_box_swiper = new Swiper('.head_box_swiper', {
+        loop: true,
+        slidesPerView: slideNum,
+        spaceBetween:3,
+        speed:1500,
+        autoplay:{
+          delay:4000
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.head_box_swiper_next',
+          prevEl: '.head_box_swiper_prev',
+        },
+      });
+    }
+  </script>
+</body>
+
+</html>

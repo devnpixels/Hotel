@@ -1,0 +1,303 @@
+.head_box{
+  background-image: url(../images/room1.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+  width: 100%;
+  margin-top: 10vh;
+  /* position: relative; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.head_box form{
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  background: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-right: 10%;
+}
+.head_box form .input_field{
+  display: flex;
+  flex-direction: column;
+}
+.head_box form .input_field_r{
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.head_box form .input_field input{
+  padding: 10px;
+  border-bottom: 1px solid #fdcf6d;
+  font-size: 1.1rem;
+}
+label > input[type='radio']{
+  display: none;
+}
+.radBox{
+  border: 1px solid #fdcf6d;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+label > input[type='radio']:checked + .radBox{
+  background: #fdcf6d;
+}
+.head_box form button{
+  padding: 10px;
+  background: #fdcf6d;
+  background: #302d46;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+}
+.phone_box{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.phone_box #phone{
+  border-bottom: none;
+  width: 30px;
+}
+.phone_box #number{
+  font-size: 1rem;
+  width: 160px;
+}
+.intro_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 20vh;
+}
+.intro_box hr{
+  height: 15vh;
+  border-left: 2px dotted gray;
+}
+.intro_box_con{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  min-height: 20vh;
+  gap: 1rem;
+}
+.intro_box_con i{
+  color: rgb(210, 189, 151);
+  font-size: 2.3rem;
+}
+.intro_box_con p{
+  display: flex;
+  color: rgb(116, 115, 115);
+  flex-direction: column;
+}
+.intro_box_con p strong{
+  font-size: 2rem;
+}
+.call_box{
+  width: 100%;
+  min-height: 70vh;
+  background-image: url(../images/call.avif);
+  background-position: center;
+  background-size: cover;
+}
+.call_box_con{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  gap: 0.3rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+.call_box_con hr{
+  height: 50px;
+  border-left: 2px dotted wheat;
+}
+.call_box_con span{
+  font-size: 1rem;
+  text-align: center;
+  max-width: 90%;
+  word-spacing: 2px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px 0 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.mid_box{
+  display: flex;
+  gap: 2rem;
+  margin-top: 5vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.mid_box strong{
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 600;
+}
+.mid_box p{
+  text-align: center;
+}
+.mid_box_con{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.mid_box_con_info{
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.mid_box_con_info img{
+  width: 230px;
+  height: 230px;
+}
+.mid_box_con_info span{
+  font-weight: 600;
+}
+.mid_box_con_info button{
+  background: #302d46;
+  background: #020a31;
+  color: wheat;
+  border-radius: 5px;
+  padding: 5px;
+}
+.prop_box_holder{
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  position: fixed;
+  display: none;
+}
+.prop_box_holder.change{
+  display: flex;
+}
+.prop_box{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  color: white;
+  color: wheat;
+  background: #020513;
+  width: 100%;
+  --mask: 
+  radial-gradient(15px at 25% 0   ,#0000 98%,#000) 50% 15px/60px 51% repeat-x,
+  radial-gradient(15px at 75% 50% ,#000 99%,#0000 101%) top/60px 30px repeat-x,
+  radial-gradient(15px at 75% 100%,#0000 98%,#000) 50% calc(100% - 15px)/60px 51% repeat-x,
+  radial-gradient(15px at 25% 50% ,#000 99%,#0000 101%) bottom/60px 30px repeat-x;
+-webkit-mask: var(--mask);
+        mask: var(--mask);
+}
+.prop_box strong{
+  font-size: 2rem;
+}
+.prop_box_con{
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+}
+.prop_box_con_left,.prop_box_con_right{
+  /* width: 40%; */
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.prop_box_con_left p{
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.prop_box_con_left p i{
+  font-size: 1rem;
+}
+.prop_box_con_left p span{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media all and (max-width:1200px){
+  .mid_box_con_info{
+    margin: 10px;
+  }
+}
+
+@media all and (max-width:1000px){
+  .head_box{
+    justify-content: center;
+  }
+  .head_box form{
+    margin: 0;
+    margin-right: 0;
+  }
+  .call_box_con{
+    width: 100%;
+  }
+}
+@media all and (max-width:800px){
+  .main_nav{
+    position: revert;
+    flex-direction: column;
+  }
+  .main_nav div{
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .main_nav div a{
+    box-shadow: none;
+  }
+  .head_box{
+    margin: 0;
+  }
+  .intro_box{
+    flex-direction: column;
+  }
+  .intro_box_con{
+    min-height: auto;
+    padding: 2rem 0;
+    height: auto;
+    width: auto;
+  }
+  .intro_box hr{
+    border-left: none;
+    height: 0;
+    width: 80%;
+    border-top: 2px dotted darkgray;
+  }
+}
+@media all and (max-width:350px){
+  .head_box form{
+    width: 215px;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/searchBar.css">
+  <link rel="stylesheet" href="css/support.css">
+  <title>Dev&Pixel - Register</title>
+</head>
+<body>
+  <section class="page">
+    <section class="support_box_holder">
+      <div class="support_box">
+        <strong>Register</strong>
+        <form>
+          <div class="input_field">
+            <span>Full name</span>
+            <input type="text" required>
+          </div>
+          <div class="input_field">
+            <span>Email</span>
+            <input type="email" required>
+          </div>
+          <div class="input_field">
+            <span>Password</span>
+            <input type="password" required>
+          </div>
+          <div class="input_field">
+            <span>Confirm Password</span>
+            <input type="password" required>
+          </div>
+          
+          <button type="submit">Proceed</button>
+        </form>
+        <p>Already Have an Account ? <a href="login.html" style="color: salmon;">login here</a></p>
+      </div>
+    </section>
+  </section>
+  <style>
+    .support_box strong{
+      font-weight: 400;
+      font-size: 1.8rem;
+    }
+    .support_box{
+      width: 400px;
+      height: auto;
+    }
+    .support_box form input{
+      height: 25px !important;
+    }
+    @media all and (max-width:450px){
+      .support_box{
+        width: 85%;
+      }
+    }
+  </style>
+</body>
+</html>
+

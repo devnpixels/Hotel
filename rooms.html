@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/searchBar.css">
+  <link rel="stylesheet" href="css/rooms.css">
+  <title>Dev&Pixel - Rooms</title>
+</head>
+
+<body>
+  <section class="page">
+    <form class="search_bar">
+      <button type="button">
+        Near me <i class="material-symbols-outlined">my_location</i>
+      </button>
+      <div class="input_field">
+        <input type="text" placeholder="City">
+      </div>
+
+      <div class="input_field">
+        <input type="date" placeholder="Duration">
+      </div>
+      <!-- <div>
+        <i class="material-symbols-outlined">timer</i> 
+        1 month, 2 Weeks
+      </div> -->
+
+      <!-- <div class="input_field">
+        <span>Depature Date</span>
+        <input type="date" placeholder="Depature Date">
+      </div> -->
+      <div class="input_field num_box">
+        <!-- <span>Number Of Guests</span> -->
+        <strong id="guest_num">
+          <small id="room_counter">1 Room</small> ,
+          <small id="guest_counter">1 Guest</small>
+        </strong>
+        <div class="room_nav_box">
+          <div>
+            <span>Room</span>
+            <span>Guests</span>
+          </div>
+          <article id="room_items">
+            <div class="room_li">
+              <span>Room 1</span>
+              <section>
+                <small class="add">+</small>
+                <strong class="room_nav_box_in">1</strong>
+                <small class="sub">-</small>
+              </section>
+            </div>
+          </article>
+          <div>
+            <span class="rem_room">Remove</span>
+            <span class="add_room">Add Room</span>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="input_field"> -->
+      <button type="submit">
+        <small>Run A Search</small>
+        <i class="material-symbols-outlined">youtube_searched_for</i>
+      </button>
+      <!-- </div> -->
+    </form>
+
+    <section class="search_box">
+      <form class="side_nav">
+        <section class="side_nav_part">
+          <p>
+            <strong>Filters</strong>
+            <small>Clear All</small>
+          </p>
+          <small>Popular Locations Near You</small>
+          <input type="text">
+        </section>
+        <hr>
+        <section class="side_nav_part">
+          <small>Accomodation Type</small>
+          <label>
+            <input type="radio" name="acc_type">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Home
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="acc_type">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Hotel
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="acc_type">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Resort
+            </div>
+          </label>
+        </section>
+        <hr>
+        <section class="side_nav_part">
+          <small>Price Range</small>
+          <div class="price_slider">
+            <div class="progress"></div>
+            <div class="range_box">
+              <input type="range" id="price_range_min" min="0" max="10000" value="2500">
+              <input type="range" id="price_range_max" min="0" max="10000" value="7500">
+            </div>
+          </div>
+          <div class="price_slider_results">
+            <input id="price_num_min" type="number" value="2500" min="0" max="10000">
+            <div style="display: flex; flex-direction: column; color: #020a31;">
+              <i class="material-symbols-outlined" style="font-size: 1.2rem;">arrow_range</i>
+              <hr style="border-top: 2px solid wheat;">
+              <small>Ghc</small>
+            </div>
+            <input id="price_num_max" type="number" value="7500" min="0" max="10000">
+          </div>
+        </section>
+        <hr>
+        <section class="side_nav_part">
+          <small>collections</small>
+          <label>
+            <input type="radio" name="collection">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Family Offer
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="collection">
+            <div class="radBox">
+              <div id="radTag"></div>
+              For Group Travellers
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="collection">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Near Airport
+            </div>
+          </label>
+        </section>
+        <section class="side_nav_part">
+          <small>Facilities</small>
+          <label>
+            <input type="radio" name="facility">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Conference Hall
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="facility">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Seating Area
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="facility">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Kitchenette
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="facility">
+            <div class="radBox">
+              <div id="radTag"></div>
+              King Sized Bed
+            </div>
+          </label>
+          <label>
+            <input type="radio" name="facility">
+            <div class="radBox">
+              <div id="radTag"></div>
+              Queen Sized Bed
+            </div>
+          </label>
+        </section>
+      </form>
+      <div class="roomList">
+        <div class="roomList_cover"></div>
+        <form>
+          <button type="button" class="side_nav_toggle material-symbols-outlined">menu</button>
+          <span>13 Dev&Pixel Hotels in Kumasi</span>
+          <div>
+            Map View
+            <label>
+              <input type="checkbox">
+              <div class="checkbox_div">
+                <div class="checkbox_div_toggle"></div>
+              </div>
+            </label>
+          </div>
+          <div>
+            sort By
+            <select name="" id="">
+              <option value="Popularity">Popularity</option>
+              <option value="Ratings">Ratings</option>
+              <option value="Price_high_to_low">Price High to Low</option>
+              <option value="Price_low_to_high">Price Low to High</option>
+            </select>
+          </div>
+        </form>
+        <div class="room_li">
+          <div class="room_swiper_box">
+            <div class="room_swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(images/room1.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room3.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room4.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room5.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room6.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room7.webp);"></div>
+              </div>
+              <div class="room_swiper_prev material-symbols-outlined">arrow_back_ios</div>
+              <div class="room_swiper_next material-symbols-outlined">arrow_forward_ios</div>
+            </div>
+            <div thumbsSlider="" class="room_swiper_thumb swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(images/room1.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room3.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room4.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room5.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room6.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(images/room7.webp);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="room_info">
+            <div class="room_info_header">
+              <strong style="color: rgb(110, 110, 110); font-weight: 400;">Ridge Condos</strong>
+              <span style="font-size: 0.85rem;">Ahodwo Rd 123, str</span>
+            </div>
+            <hr class="room_info_hr">
+            <div class="room_info_ratings">
+              <p><span style="background: #1ab64f;" id="rating_span"> 4.6 <i class="material-symbols-outlined"
+                    style="font-size: 1rem;">star</i></span> .Excellent <small>25000 ratings</small> </p>
+              <div>
+                <span><i class="material-symbols-outlined" style="color: skyblue;">bolt</i> Reception</span>
+                <span><i class="material-symbols-outlined" style="color: skyblue;">bolt</i> Free Wifi</span>
+                <span><i class="material-symbols-outlined" style="color: skyblue;">bolt</i> Power Backup</span>
+                <span>+ 22 more</span>
+              </div>
+            </div>
+            <hr class="room_info_hr" id="room_li_hide_hr">
+            <div class="room_info_status">
+              <i class="material-symbols-outlined" style="color: salmon;">local_fire_department</i> 10 people booked
+              this hotel in last 6 hours
+            </div>
+            <nav class="room_info_nav_box">
+              <div class="room_info_pricing">
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                  <strong style="color: #1ab64f;">Ghc 7,500</strong> <small style="text-decoration: line-through;">Ghc
+                    10,000</small> <span>15% off</span>
+                </div>
+                <small style="color: darkgray;">per Room per night</small>
+              </div>
+              <div class="room_info_nav">
+                <a href="room_info.html" style="border: 1px solid #020a31; color: #020a31;">View Details</a>
+                <a href="room_book.html" style="background: #1ab64f; color: white;">Book Now</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <style>
+
+      </style>
+    </section>
+  </section>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  
+  <script>
+    const roomList = document.querySelector('.roomList')
+    const room_li = document.querySelector('.roomList .room_li')
+    for (var i = 0; i < 4; i++) {
+      var room_li_clone = room_li.cloneNode(true)
+      roomList.appendChild(room_li_clone)
+    }
+    
+  </script>
+  <script>
+    const makeRoomSwiperThumb = () => {
+      let room_swiper_thumbs = document.querySelectorAll('.room_swiper_thumb')
+      room_swiper_thumbs.forEach(room_swiper_thumb => {
+        var room_swiper_thumb_swiper = new Swiper(".room_swiper_thumb", {
+          loop: true,
+          direction: 'vertical',
+          spaceBetween: 10,
+          speed: 1000,
+          slidesPerView: 3,
+          freeMode: true,
+        });
+        return room_swiper_thumb_swiper
+      })
+    }
+
+    window.onload = () => {
+      var wide = window.innerWidth
+      makeRoomSwiper(wide)
+    }
+    window.onresize = () => {
+      var wide = window.innerWidth
+      makeRoomSwiper(wide)
+    }
+
+    const makeRoomSwiper = (wide) => {
+      if (wide > 1000) {
+        var room_swiper = new Swiper('.room_swiper', {
+          loop: true,
+          speed: 1000,
+          slidesPerView: 1,
+          navigation: {
+            nextEl: '.room_swiper_next',
+            prevEl: '.room_swiper_prev',
+          },
+          thumbs: {
+            swiper: makeRoomSwiperThumb(),
+          },
+        });
+      } else {
+        if (wide < 1000 && wide > 800) {
+          var slideNum = 3
+        } else if (wide < 800 && wide > 500) {
+          var slideNum = 2
+        } else {
+          var slideNum = 1
+        }
+        var room_swiper = new Swiper('.room_swiper', {
+          loop: true,
+          speed: 1000,
+          spaceBetween: 10,
+          slidesPerView: slideNum,
+          navigation: {
+            nextEl: '.room_swiper_next',
+            prevEl: '.room_swiper_prev',
+          },
+        });
+      }
+    }
+  </script>
+
+  <script>
+    const side_nav = document.querySelector('.side_nav')
+    const side_nav_toggle = document.querySelector('.side_nav_toggle')
+    const roomList_cover = document.querySelector('.roomList_cover')
+
+    side_nav_toggle.onclick = () => {
+      addSideNav()
+    }
+
+    side_nav.onmouseover = () => {
+      addSideNav()
+    }
+    roomList_cover.onclick = () => {
+      if (!event.target.classList.contains('side_nav_toggle')) {
+        remSideNav()
+      }
+    }
+    const addSideNav = () => {
+      side_nav.classList.add('change')
+      roomList_cover.classList.add('change')
+    }
+
+    const remSideNav = () => {
+      side_nav.classList.remove('change')
+      roomList_cover.classList.remove('change')
+    }
+  </script>
+  <script>
+    const price_range_min = document.getElementById('price_range_min')
+    const price_range_max = document.getElementById('price_range_max')
+    const price_progress = document.querySelector('.price_slider .progress')
+    const price_num_min = document.getElementById('price_num_min')
+    const price_num_max = document.getElementById('price_num_max')
+
+    const makePriceSlider = () => {
+      var gap = 1000
+      var price_max = price_range_min.max
+      price_num_min.oninput = () => {
+        if (price_num_min.value > 10000 || price_num_min.value < 0 || price_num_min.value > (price_range_max.value - gap)) {
+          price_num_min.value = parseInt(price_range_max.value) - gap
+          price_range_min.value = parseInt(price_range_max.value) - gap
+        }
+        else {
+          price_range_min.value = price_num_min.value
+        }
+        price_progress.style.left = `${(price_range_min.value * 100) / price_max}%`
+      }
+
+      price_num_max.oninput = () => {
+        if (price_num_max.value > 10000 || price_num_max.value < 0 || price_num_max.value < (parseInt(price_range_min.value) + gap)) {
+          price_num_max.value = parseInt(price_range_min.value) + gap
+          price_range_max.value = parseInt(price_range_min.value) + gap
+        } else {
+          price_range_max.value = price_num_max.value
+        }
+        price_progress.style.right = `${100 - ((price_range_max.value * 100) / price_max)}%`
+      }
+
+      price_range_min.oninput = () => {
+        var diff = price_range_max.value - price_range_min.value
+        if (diff < gap) {
+          price_range_min.value = parseInt(price_range_max.value) - gap
+        }
+        price_num_min.value = price_range_min.value
+        price_progress.style.left = `${(price_range_min.value * 100) / price_max}%`
+      }
+      price_range_max.oninput = () => {
+        var diff = price_range_max.value - price_range_min.value
+        if (diff < gap) {
+          price_range_max.value = parseInt(price_range_min.value) + gap
+        }
+        price_num_max.value = price_range_max.value
+        price_progress.style.right = `${100 - ((price_range_max.value * 100) / price_max)}%`
+      }
+    }
+    makePriceSlider()
+  </script>
+</body>
+
+</html>

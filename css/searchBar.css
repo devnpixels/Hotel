@@ -1,0 +1,169 @@
+.search_bar{
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(112, 111, 111);  
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  min-height: 10vh;
+  transition: 0.3s linear;
+  border-radius: 0;
+  top: 0;
+  /* padding: 10px 0; */
+  background: var(--info-text-color);
+  /* background: wheat; */
+  background: rgb(245, 245, 245);
+  /* background: white; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* background: black; */
+  /* background: white; */
+  /* --mask: 
+    radial-gradient(4px at 75% 100%,#0000 98%,#000) 50% calc(100% - 4px)/16px 100% repeat-x,
+    radial-gradient(4px at 25% 50%,#000 99%,#0000 101%) bottom/16px 8px repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask); */
+}
+  /* left: 0; */
+
+.search_bar .input_field span{
+  display: none;
+}
+.search_bar .input_field input, #guest_num{
+  color: rgb(114, 114, 114);
+  font-size: 1rem;
+  /* font-weight: 600; */
+  padding: 8px 10px;
+  background: white;
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 5px;
+}
+#guest_num{
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  width: 200px;
+}
+.room_nav_box span{
+  display: flex;
+}
+.search_bar .input_field input::placeholder{
+  color: rgb(114, 114, 114);
+  /* font-weight: 600; */
+}
+.room_nav_box{
+  flex-direction: column;
+}
+.room_nav_box div{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  color: black;
+  border-bottom: 1px solid darkgray;
+}
+.room_nav_box div section{
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+.room_nav_box div section small{
+  border: 1px solid darkgray;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.room_nav_box div section strong{
+  width: 15px;
+  padding: 10px;
+  height: 15px;
+  text-align: center;
+}
+.room_nav_box div input[type=number]::-webkit-inner-spin-button{
+  display: none;
+}
+.num_box{
+  position: relative;
+}
+.num_box .room_nav_box{
+  top: 110%;
+  position: absolute;
+  width: 100%;
+  display: none;
+  border-radius: 5px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  z-index: 10;
+}
+.num_box .room_nav_box.change{
+  transition: 0.1s ease;
+  display: flex;
+  animation: fadeUp 0.1s ease;
+}
+.num_box .room_nav_box.hide{
+  opacity : 0;
+  bottom : -50px;
+}
+@keyframes fadeUp{
+  0%{opacity: 0; top: 120%;}
+  100%{opacity: 1; top: 110%;}
+}
+.search_bar button{
+  padding:10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background:  var(--info-text-color);
+  color: #fdcf6d;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.search_bar button{
+  border: 1px solid #fdcf6d;
+}
+.search_bar  button i{
+  padding: 1px;
+  border-radius: 3px;
+  color: #fdcf6d;
+}
+
+@media all and (max-width:1300px){
+  .search_bar{
+    position: revert;
+    padding: 10px 0;
+  }
+}
+
+@media all and (max-width:600px){
+  .search_bar{
+    flex-direction: column;
+    gap: 0.5rem;
+    /* background: red; */
+  }
+  .search_bar .input_field{
+    /* border: 1px solid gold; */
+    width: 90%;
+  }
+  .search_bar .input_field input, .search_bar .input_field #guest_num{
+    border-radius: 0;
+    text-align: center;
+    justify-content: center;
+    /* background: yellow; */
+    /* border-radius: 5px; */
+    padding: 10px 5%;
+    width: 90%;
+  }
+}
